@@ -12,9 +12,9 @@ export default function Layout({ children }: LayoutProps) {
 
   const navItems = [
     { path: '/feed', icon: 'Home', label: 'Главная' },
+    { path: '/streams', icon: 'Radio', label: 'Стримы' },
     { path: '/search', icon: 'Search', label: 'Поиск' },
     { path: '/upload', icon: 'PlusSquare', label: 'Загрузить' },
-    { path: '/subscriptions', icon: 'Users', label: 'Подписки' },
     { path: '/profile', icon: 'User', label: 'Профиль' },
   ];
 
@@ -28,13 +28,22 @@ export default function Layout({ children }: LayoutProps) {
           >
             STREAM - BOOM
           </button>
-          <button
-            onClick={() => navigate('/trends')}
-            className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors"
-          >
-            <Icon name="TrendingUp" size={20} />
-            <span className="hidden sm:inline">Тренды</span>
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => navigate('/collabs')}
+              className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors"
+            >
+              <Icon name="Handshake" size={20} />
+              <span className="hidden sm:inline">Коллабы</span>
+            </button>
+            <button
+              onClick={() => navigate('/trends')}
+              className="flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors"
+            >
+              <Icon name="TrendingUp" size={20} />
+              <span className="hidden sm:inline">Тренды</span>
+            </button>
+          </div>
         </div>
       </header>
 
