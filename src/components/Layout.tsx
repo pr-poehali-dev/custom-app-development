@@ -26,7 +26,7 @@ export default function Layout({ children }: LayoutProps) {
             onClick={() => navigate('/feed')}
             className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
           >
-            STREAM BOOM
+            STREAM - BOOM
           </button>
           <button
             onClick={() => navigate('/trends')}
